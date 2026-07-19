@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package hello.v1;
+
+option go_package = "github.com/homepunks/zymyran/gen/go/hello/v1;hellov1";
+
+service GreeterService {
+  rpc Greet(GreetRequest) returns (GreetResponse);
+}
+
+message GreetRequest {
+  string name = 1;
+}
+
+message GreetResponse {
+  string Message = 1;
+}
